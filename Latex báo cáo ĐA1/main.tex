@@ -1,0 +1,489 @@
+%\documentclass[a4paper,12pt]{book}
+\documentclass[oneside, a4paper]{book}
+%\usepackage{amsmath,amsxtra,amssymb,latexsym, amscd,amsthm, array}
+\oddsidemargin0mm
+\textwidth154mm
+\parskip2mm
+\parindent0mm
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{cite}
+\usepackage{indentfirst}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{tikz, pgf} 
+\usetikzlibrary{patterns}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\usepackage{amsmath,amssymb,latexsym,amscd,amsxtra,graphicx,graphpap,amsthm}
+\usepackage{mathtools}
+\usepackage{pb-diagram}
+\usepackage{indentfirst}
+\usepackage{caption}
+\usepackage{aligned-overset}
+\usepackage{picinpar,floatflt}
+\usepackage{longtable}
+\usepackage{fancybox}
+\usepackage[utf8]{vietnam}
+\usepackage[utf8]{inputenc}
+\usepackage[tight,vietnam]{minitoc}
+\usepackage{anyfontsize}
+% hyperref chỉ được nạp một lần và nên nạp gần cuối phần package
+\usepackage[hidelinks]{hyperref}
+\Urlmuskip=0mu plus 1mu
+%\usepackage{commath}
+%==================================
+\usepackage{titletoc}
+\titlecontents{chapter}
+[0pt]
+{\bfseries}
+{\chaptername\ \thecontentslabel\enskip}
+{}
+{\hfill\contentspage}
+%==================================
+
+%==================================
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}
+\newcommand{\eproof}{\hfill $\square$}
+%\newcommand{\eproof}{\hfill}
+\newcommand{\chm}{{\bfseries Chứng minh.}}
+\newenvironment{cm}{\chm}{\eproof}
+%===============================
+\theoremstyle{plain}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Định lý}
+\newtheorem*{definition}{Định nghĩa}
+\newtheorem{proposition}{Mệnh đề}
+\newtheorem*{remark}{Nhận xét}
+\theoremstyle{remark}
+\newcommand{\wcon}{\rightharpoonup}
+\newtheorem{example}{Ví dụ}
+\newtheorem{lemma}{Bổ đề}
+
+\theoremstyle{definition}
+\newtheorem{dn}{Định nghĩa}[chapter]
+\providecommand*{\dnautorefname}{Định nghĩa}
+\newtheorem{bt}[dn]{Bài toán}
+\providecommand*{\btautorefname}{Bài toán}
+\newtheorem{vd}[dn]{\bfseries Ví dụ}
+\providecommand*{\mdautorefname}{Mệnh đề}
+
+\newtheorem{bd}[dn]{Bổ đề}
+\providecommand*{\bdautorefname}{Bổ đề}
+\newtheorem{md}[dn]{Mệnh đề}
+\providecommand*{\mdautorefname}{Mệnh đề}
+\newtheorem{hq}[dn]{Hệ quả}
+\providecommand*{\hqautorefname}{Hệ quả}
+\newtheorem{dl}[dn]{\bfseries Định lý}
+\providecommand*{\dlautorefname}{Định lý}
+\newtheorem{algorithm}{\bfseries Thuật toán}[chapter]
+\providecommand*{\algorithmautorefname}{Thuật toán}
+\newtheorem*{namedthm}{\namedthmname}
+\newcounter{namedthm}
+\makeatletter
+\newenvironment{named}[1]
+{\def\namedthmname{#1}%
+	\refstepcounter{namedthm}%
+	\namedthm\def\@currentlabel{#1}}
+{\endnamedthm}
+\makeatother
+
+\theoremstyle{remark}
+\newtheorem{kh}[dn]{ký hiệu}
+\newtheorem{nx}[dn]{\bf Nhận xét}
+\newtheorem{cy}[dn]{Chú ý}
+\renewenvironment{proof}{{\bfseries \itshape Chứng minh }}
+
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\oddsidemargin}{0.3cm}     %Lề trái tính từ điểm cách mép giấy 2.54cm
+\setlength{\topmargin}{-1cm}          %Lề trên tính từ điểm cách mép giấy 2.54cm
+\setlength{\headsep}{0.5cm}                %Khoang cach tu  Headerline tới Khối chữ
+\textwidth=15.5cm
+\textheight=24.5cm
+\renewcommand{\bibname}{Tài liệu tham khảo}
+\renewcommand{\large}{\fontsize{14pt}{14pt}\selectfont}
+\renewcommand{\Large}{\fontsize{16pt}{16pt}\selectfont}
+\renewcommand{\LARGE}{\fontsize{15pt}{15pt}\selectfont}
+\renewcommand{\th}{\fontsize{18pt}{18pt}\selectfont}
+\makeatletter
+
+\makeatother
+
+
+\newenvironment{mproof}{\paragraph{Chứng minh:}}{\hfill$\square$}
+\newenvironment{myproof}[2] {\paragraph{Proof of {#1} {#2} :}}{\hfill$\square$}
+\DeclarePairedDelimiter{\pro}{\langle}{\rangle}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\usepackage{xpatch}
+\makeatletter
+\AtBeginDocument{\xpatchcmd{\@thm}{\thm@headpunct{.}}{\thm@headpunct{}}{}{}}
+\makeatother
+
+\usepackage{fancyhdr}
+\usepackage{xcolor} % cho số trang màu
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% Footer trái: tên sinh viên
+\fancyfoot[L]{\textcolor{black}{Nguyễn Hữu Nhật Anh - 20237412}}
+
+% Footer phải: số trang màu đỏ
+\fancyfoot[R]{\textcolor{red}{\thepage}}
+
+% Gạch ngang trên footer
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot[L]{\textcolor{black}{Nguyễn Hữu Nhật Anh - 20237412}}
+	\fancyfoot[R]{\textcolor{black}{\thepage}}
+	\renewcommand{\footrulewidth}{0.4pt}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
+\begin{document}
+	
+	
+	\thispagestyle{empty}
+	%\thispagestyle{headings}
+	\setcounter{page}{1}%
+	\pagenumbering{arabic}
+	%\addcontentsline{toc}{chapter}{{Trang bìa phụ}}
+	%\newgeometry{top=2.0cm,bottom=3.0cm,left=3.5cm,right=2.8cm}
+	%\begin{titlepage}
+	
+	%\setlength{\fboxrule}{1pt}
+	%\thisfancypage{\setlength{\fboxsep}{2pt}\setlength{\fboxrule}{2pt}\doublebox}{} 
+	%\setlength{\fboxrule}{1pt}
+	%\thisfancypage{\setlength{\fboxsep}{0pt}\setlength{\shadowsize}{0pt}\doublebox}{}
+	\pagenumbering{arabic}
+	%\newgeometry{left=2.8cm,right=1.8cm,top=2.5cm,bottom=2cm}
+	\begin{tikzpicture}[remember picture,overlay,inner sep=0,outer sep=0]
+		\draw[blue!70!black,line width=2.5pt] ([xshift=-1cm,yshift=-2cm]current page.north east) coordinate (A)--([xshift=2cm,yshift=-2cm]current page.north west) coordinate(B)--([xshift=2cm,yshift=2cm]current page.south west) coordinate (C)--([xshift=-1cm,yshift=2cm]current page.south east) coordinate(D)--cycle;
+	\end{tikzpicture}
+	\begin{center}
+		\Large
+		\vspace{-1cm}
+		{\bfseries ĐẠI HỌC BÁCH KHOA HÀ NỘI}\\
+		{\bfseries KHOA TOÁN-TIN}
+		
+	\end{center}
+	\vspace{1cm}
+	\begin{center}
+		\fontsize{17pt}{15pt}\selectfont
+		\includegraphics[scale=0.5]{hust.jpg}
+		\vspace{1cm}
+		
+		\fontsize{22pt}{15pt}\selectfont
+		\bfseries PHÂN TÍCH DOANH SỐ VÀ XU HƯỚNG TIÊU DÙNG KHÁCH HÀNG TRONG LĨNH VỰC BÁN LẺ
+		
+		
+	\end{center}
+	
+	\vspace{0.8cm}
+	\begin{center}
+		\fontsize{16pt}{16pt}\selectfont 	
+		{\bfseries ĐỒ ÁN I}\\	
+		\fontsize{14pt}{16pt}\selectfont
+		{\bfseries Chuyên ngành: Hệ thống Thông tin Quản lý}\\
+	\end{center}
+	
+	\vspace{1cm}
+	\begin{center}
+		\fontsize{13pt}{16pt}\selectfont
+		\textbf{\begin{tabular}{l l}
+				Giảng viên hướng dẫn:& TS. Đoàn Duy Trung\\
+				Sinh viên thực hiện:& Nguyễn Hữu Nhật Anh\\
+				Mã số sinh viên:& 20237412\\
+		\end{tabular}}
+		
+	\end{center}
+	\vspace{1cm}
+	\begin{center}
+		\LARGE HÀ NỘI -- 2026
+	\end{center}
+	
+	%\restoregeometry
+	\newpage
+	
+	\newpage
+	%\newgeometry{left=2.2cm,right=2.8cm,top=2cm,bottom=2cm}
+	\thisfancypage{
+		\setlength{\fboxsep}{0.5cm}
+		\fbox}{}
+	\thispagestyle{empty}
+	\fontsize{13pt}{16pt}\selectfont
+	\bigbreak
+	\begin{center}
+		{\bfseries NHẬN XÉT CỦA GIẢNG VIÊN HƯỚNG DẪN}
+	\end{center}
+	\bigbreak
+	
+	\fontsize{12pt}{14pt}\selectfont
+	\begin{enumerate}
+		\item [{\bfseries 1.}]{\bfseries Mục tiêu và nội dung của đồ án}
+		\begin{enumerate}
+			\item Mục tiêu: Phân tích doanh số và xu hướng tiêu dùng khách hàng trong lĩnh vực bán lẻ dựa trên bộ dữ liệu Superstore Sales; từ đó trực quan hóa dữ liệu, xây dựng mô hình dự báo lợi nhuận và phân cụm khách hàng nhằm hỗ trợ đánh giá hiệu quả kinh doanh.
+			\item Nội dung: Đồ án gồm các nội dung chính: cơ sở lý thuyết, tiền xử lý và phân tích dữ liệu, xây dựng dashboard Power BI, xây dựng các mô hình hồi quy và phân cụm, so sánh kết quả mô hình, rút ra nhận xét, hạn chế và hướng phát triển. 
+		\end{enumerate}
+		\item [{\bfseries 2.}] {\bfseries Kết quả đạt được} 
+		\begin{enumerate}
+			\item Đã thực hiện tiền xử lý, phân tích khám phá dữ liệu và xây dựng dashboard trực quan phục vụ phân tích doanh thu, lợi nhuận, khu vực, sản phẩm, khách hàng và chiết khấu.
+			\item Đã xây dựng và đánh giá các mô hình dự báo lợi nhuận gồm hồi quy tuyến tính đa biến, Random Forest, Gradient Boosting và XGBoost; trong đó XGBoost cho kết quả tốt nhất trên tập kiểm tra.
+			\item Đã ứng dụng K-Means để phân cụm khách hàng, đồng thời rút ra một số nhận xét thực tiễn hỗ trợ kiểm soát chiết khấu, đánh giá lợi nhuận và định hướng chăm sóc khách hàng.
+		\end{enumerate}
+		\item [{\bfseries 3.}]{\bfseries Ý thức làm việc của sinh viên:} Sinh viên có thái độ làm việc nghiêm túc, chủ động tìm hiểu tài liệu, thực hiện đầy đủ các nội dung của đồ án và có tinh thần tiếp thu góp ý để hoàn thiện báo cáo.
+	\end{enumerate}
+	\hspace{0.5\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\noindent\begin{center}
+			\textit{Hà Nội, ngày     tháng  năm 2026} \\
+			Giảng viên hướng dẫn\\ \vspace{2cm}
+			\textbf{TS. Đoàn Duy Trung}
+		\end{center}	
+	\end{minipage}
+	%\restoregeometry
+	
+	\newpage
+	\fontsize{22pt}{16pt}\selectfont
+	{\bfseries Lời cảm ơn}
+	\fontsize{13pt}{16pt}\selectfont
+	\bigskip
+	\setlength{\parindent}{2em} % thiết lập độ thụt đầu dòng
+	\setlength{\parskip}{0.5em} % khoảng cách giữa các đoạn
+	
+	Trước tiên, em xin gửi lời cảm ơn chân thành tới Thầy – TS. Đoàn Duy Trung – người đã tận tình hướng dẫn và đồng hành cùng em trong suốt quá trình thực hiện đồ án “Phân tích doanh số và xu hướng tiêu dùng khách hàng”. Sự hỗ trợ, những góp ý chuyên môn và định hướng thực tiễn từ Thầy là yếu tố quan trọng giúp em hoàn thành tốt đồ án này.
+	
+	Trong quá trình làm việc, em học hỏi được rất nhiều từ các lần góp ý của Thầy – từ cách tư duy logic, tổ chức mô hình dữ liệu cho đến việc trình bày rõ ràng, khoa học. Đây là những bài học quý giá giúp em trưởng thành hơn cả về chuyên môn lẫn tác phong làm việc chuyên nghiệp.
+	
+	Em cũng xin cảm ơn các Thầy, Cô trong Khoa Toán – Tin, Trường Đại học Bách Khoa Hà Nội đã truyền đạt kiến thức và tạo nền tảng vững chắc trong suốt quá trình học tập. Những môn học như Cơ sở dữ liệu, Hệ hỗ trợ quyết định,... đã giúp em triển khai đồ án một cách bài bản và thực tế.
+	
+	Dù đã nỗ lực hết sức, em hiểu rằng đồ án vẫn còn hạn chế và mong nhận được những góp ý quý báu để tiếp tục hoàn thiện trong tương lai.
+	
+	Em xin chân thành cảm ơn!
+	
+	
+	
+	\bigskip
+	
+	\begin{minipage}{0.5\textwidth}
+	\end{minipage}
+	\hspace{0.5\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\noindent\begin{center}
+			\vspace{1cm}
+			\textit{Hà Nội, tháng     năm 2026} \\
+			Tác giả đồ án\\ \vspace{2cm}
+			\textbf{Nguyễn Hữu Nhật Anh}
+		\end{center}	
+	\end{minipage}
+	
+	
+	\bigskip
+	
+	\newpage
+	\fontsize{22pt}{16pt}\selectfont
+	{\bfseries Tóm tắt nội dung Đồ án}
+	\fontsize{13pt}{16pt}\selectfont
+	\bigskip
+	
+	Đồ án tập trung nghiên cứu và phân tích dữ liệu bán hàng dựa trên bộ dữ liệu \textbf{Superstore Sales}, nhằm khai thác các thông tin có giá trị về doanh thu, lợi nhuận, xu hướng tiêu dùng của khách hàng và các yếu tố ảnh hưởng đến hiệu quả kinh doanh. Thông qua quá trình tiền xử lý dữ liệu, phân tích khám phá dữ liệu, trực quan hóa và xây dựng các mô hình phân tích, đồ án hướng tới việc rút ra những nhận xét có cơ sở khoa học, từ đó hỗ trợ đánh giá tình hình kinh doanh một cách khách quan và trực quan hơn.
+	
+	Nội dung đồ án được triển khai qua bốn phần chính như sau:
+	
+	\begin{enumerate}
+		\item \textbf{Tổng quan lý thuyết:} Trình bày cơ sở lý thuyết liên quan đến phân tích dữ liệu, trực quan hóa dữ liệu và vai trò của dữ liệu trong hỗ trợ ra quyết định. Bên cạnh đó, đồ án cũng giới thiệu các khái niệm nền tảng như thống kê mô tả, phân tích khám phá dữ liệu (Exploratory Data Analysis -- EDA), phân tích mối quan hệ giữa các biến và một số mô hình phân tích dữ liệu thường được ứng dụng trong lĩnh vực kinh doanh.
+		
+		\item \textbf{Tiền xử lý, phân tích khám phá và trực quan hóa dữ liệu:} Trên cơ sở bộ dữ liệu Superstore Sales, đồ án tiến hành thực hiện các bước tiền xử lý và phân tích khám phá dữ liệu bằng ngôn ngữ \textbf{Python}, sử dụng chủ yếu các thư viện \textbf{pandas} và \textbf{numpy} nhằm kiểm tra cấu trúc dữ liệu, xử lý dữ liệu thiếu, chuẩn hóa kiểu dữ liệu, xây dựng các biến cần thiết và phân tích thống kê ban đầu. Quá trình EDA giúp nhận diện đặc điểm phân bố của dữ liệu, mối quan hệ giữa các biến cũng như những yếu tố nổi bật cần quan tâm trong quá trình phân tích. Sau đó, dữ liệu được trực quan hóa thông qua dashboard xây dựng trên \textbf{Power BI}, tập trung thể hiện các nội dung như xu hướng doanh số theo thời gian, doanh thu và lợi nhuận theo khu vực, nhóm sản phẩm, phân khúc khách hàng, cũng như mối quan hệ giữa chiết khấu, số lượng bán và lợi nhuận. Từ các kết quả trực quan hóa, đồ án tiến hành phân tích và diễn giải các insight nhằm làm rõ những xu hướng và đặc điểm nổi bật của hoạt động kinh doanh.
+		
+		\item \textbf{Xây dựng mô hình phân tích dữ liệu:} Dựa trên kết quả thu được từ quá trình trực quan hóa và phân tích khám phá dữ liệu, đồ án tiếp tục xây dựng nhiều mô hình phân tích dữ liệu nhằm khai thác sâu hơn bản chất của tập dữ liệu. Các mô hình này được sử dụng để phân tích mối quan hệ giữa các biến, xác định mức độ ảnh hưởng của các yếu tố đến doanh thu và lợi nhuận, đồng thời hỗ trợ phân nhóm, so sánh và nhận diện các đặc điểm tiêu biểu trong dữ liệu. Việc kết hợp nhiều mô hình khác nhau không chỉ giúp nâng cao tính khách quan trong quá trình đánh giá mà còn góp phần củng cố các nhận định đã rút ra từ phần trực quan hóa dữ liệu. Kết quả phân tích mô hình tiếp tục được diễn giải thông qua các insight, làm cơ sở cho việc nhận xét và đánh giá tổng thể.
+		
+		\item \textbf{Nhận xét, đánh giá và kết luận:} Trên cơ sở tổng hợp kết quả từ phần phân tích khám phá dữ liệu, trực quan hóa và các mô hình phân tích, đồ án đưa ra những nhận xét về xu hướng bán hàng, hiệu quả kinh doanh theo từng nhóm đối tượng và các yếu tố có ảnh hưởng đáng kể đến kết quả kinh doanh. Từ đó, đồ án hình thành các kết luận chung về giá trị khai thác của bộ dữ liệu, đồng thời đề xuất một số định hướng phát triển tiếp theo nhằm nâng cao hiệu quả phân tích và khả năng ứng dụng trong thực tiễn.
+	\end{enumerate}
+	
+	
+	
+	\begin{minipage}{0.5\textwidth}
+	\end{minipage}
+	\hspace{0.5\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\noindent\begin{center}
+			\vspace{1cm}
+			\textit{Hà Nội, tháng  năm 2026} \\
+			Tác giả đồ án\\ \vspace{3cm}
+			\textbf{Nguyễn Hữu Nhật Anh}
+		\end{center}	
+	\end{minipage}
+	
+	
+	\tableofcontents % Là xuất hiện mục lục.
+	
+	
+	\listoffigures % <-- Danh sách hình vẽ sẽ xuất hiện ở đây
+	
+	
+	%\newpage
+	
+	%\listoftables
+	%\thispagestyle{empty}
+	
+	%\newpage
+	%\addcontentsline{toc}{chapter}{\bfseries Danh sách hình vẽ}
+	%\listoffigures
+	
+	
+	\chapter{Tổng quan về đề tài}
+	\input{Content/Chương 1}
+	
+	\chapter{Cơ sở lý thuyết}
+	\input{Content/Chương 2}
+	
+	\chapter{Phân tích, khám phá dữ liệu và trực quan hóa}
+	\input{Content/Chương 3}
+	
+	\chapter{Xây dựng các mô hình phân tích dữ liệu}
+	\input{Content/Chương 4}
+	
+	\chapter{Đánh giá và so sánh mô hình}
+	\input{Content/Chương 5}
+	
+	\chapter{Kết luận và hướng phát triển}
+	\input{Content/Chương 6}
+	
+	
+	
+	%\addcontentsline{toc}{chapter}{Kết luận}
+	%\setcounter{section}{0}
+	%\renewcommand*{\thesection}{\the\value{section}}
+	
+		
+	%================ PHỤ LỤC ================
+	\clearpage
+	\phantomsection
+	\chapter*{Phụ lục}
+	\addcontentsline{toc}{chapter}{Phụ lục}
+	
+	Trong quá trình thực hiện đồ án, bộ dữ liệu và một số tài liệu liên quan được em lưu trữ tại các đường dẫn sau:
+	
+	\begin{itemize}
+		\item \textbf{Link bộ dữ liệu Superstore Sales:} \\
+		\url{https://public.tableau.com/app/learn/sample-data}
+		
+		\item \textbf{Link GitHub lưu trữ dữ liệu đồ án:} \\
+		\url{https://github.com/nguyenhuunhatanh/DoAn1-Superstore_Sales}
+	\end{itemize}
+	
+	
+	%================ TÀI LIỆU THAM KHẢO ================
+	\clearpage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\bfseries Tài liệu tham khảo}
+	
+	{\sloppy
+		\begin{thebibliography}{99}
+			
+			\bibitem{islr}
+			James, G., Witten, D., Hastie, T., Tibshirani, R.
+			\textit{An Introduction to Statistical Learning: with Applications in R}.
+			2nd Edition, Springer, 2021.
+			
+			\bibitem{esl}
+			Hastie, T., Tibshirani, R., Friedman, J.
+			\textit{The Elements of Statistical Learning: Data Mining, Inference, and Prediction}.
+			2nd Edition, Springer, 2009.
+			
+			\bibitem{geron}
+			Géron, A.
+			\textit{Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow}.
+			3rd Edition, O'Reilly Media, 2022.
+			
+			\bibitem{few}
+			Few, S.
+			\textit{Show Me the Numbers: Designing Tables and Graphs to Enlighten}.
+			2nd Edition, Analytics Press, 2012.
+			
+			\bibitem{powerbi}
+			Microsoft.
+			\textit{What is business intelligence?}
+			Microsoft Learn, 2025.\\
+			Available at: \url{https://learn.microsoft.com/en-us/power-bi/fundamentals/}
+			
+			\bibitem{sklearn_linear}
+			Scikit-learn Developers.
+			\textit{Linear Models}.
+			Scikit-learn Documentation, 2025.\\
+			Available at: \url{https://scikit-learn.org/stable/modules/linear_model.html}
+			
+			\bibitem{sklearn_rf}
+			Scikit-learn Developers.
+			\textit{RandomForestRegressor}.
+			Scikit-learn Documentation, 2025.\\
+			Available at: \url{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html}
+			
+			\bibitem{sklearn_gbr}
+			Scikit-learn Developers.
+			\textit{GradientBoostingRegressor}.
+			Scikit-learn Documentation, 2025.\\
+			Available at: \url{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html}
+			
+			\bibitem{chen2016xgboost}
+			Chen, T., Guestrin, C.
+			\textit{XGBoost: A Scalable Tree Boosting System}.
+			Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2016, pp.~785--794.
+			
+			\bibitem{sklearn_kmeans}
+			Scikit-learn Developers.
+			\textit{KMeans}.
+			Scikit-learn Documentation, 2025.\\
+			Available at: \url{https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html}
+			
+			\bibitem{sklearn_silhouette}
+			Scikit-learn Developers.
+			\textit{silhouette\_score}.
+			Scikit-learn Documentation, 2025.\\
+			Available at: \url{https://scikit-learn.org/stable/modules/generated/sklearn.metrics.silhouette_score.html}
+			
+			\bibitem{sklearn_userguide}
+			Scikit-learn Developers.
+			\textit{Scikit-learn User Guide}.
+			Scikit-learn Documentation, 2025.\\
+			Available at: \url{https://scikit-learn.org/stable/user_guide.html}
+			
+		\end{thebibliography}
+	}
+	
+\end{document}

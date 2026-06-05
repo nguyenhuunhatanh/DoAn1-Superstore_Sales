@@ -1,0 +1,316 @@
+\section{Khái quát về phân tích dữ liệu trong kinh doanh}
+
+Phân tích dữ liệu trong kinh doanh là quá trình thu thập, làm sạch, xử lý và khai thác dữ liệu nhằm tạo ra thông tin phục vụ cho mục tiêu quản trị và ra quyết định \cite{islr,esl}. Quá trình này thường bao gồm các bước như tiền xử lý dữ liệu, thống kê mô tả, phân tích khám phá dữ liệu và trực quan hóa dữ liệu. Trong nhiều trường hợp, các kỹ thuật dự báo và học máy cũng được áp dụng nhằm nâng cao hiệu quả khai thác dữ liệu \cite{islr,esl}.
+
+Trong thực tiễn, phân tích dữ liệu giúp doanh nghiệp trả lời nhiều câu hỏi quan trọng như: doanh số biến động như thế nào theo thời gian, khu vực nào hoạt động hiệu quả nhất, nhóm khách hàng nào mang lại giá trị cao, hay yếu tố nào ảnh hưởng đến doanh thu và lợi nhuận \cite{islr}. Nhờ đó, doanh nghiệp có thể chuyển từ cách ra quyết định dựa trên cảm tính sang cách tiếp cận dựa trên bằng chứng dữ liệu \cite{esl}.
+
+Đối với đề tài này, phân tích dữ liệu trong kinh doanh là nền tảng quan trọng để nghiên cứu doanh số bán hàng và xu hướng tiêu dùng của khách hàng trên bộ dữ liệu Superstore Sales. Thông qua quá trình xử lý, phân tích và khai thác dữ liệu, đề tài hướng đến việc làm rõ đặc điểm hoạt động kinh doanh, đánh giá hiệu quả bán hàng và hỗ trợ rút ra các nhận xét có ý nghĩa thực tiễn.
+
+\section{Các loại hình phân tích dữ liệu trong kinh doanh}
+
+Trong lĩnh vực kinh doanh, phân tích dữ liệu thường được chia thành một số loại hình cơ bản như sau \cite{islr,esl}:
+
+\begin{itemize}
+    \item \textbf{Phân tích mô tả:} Đây là loại hình phân tích nhằm tóm tắt và phản ánh tình hình đã diễn ra thông qua các chỉ số, bảng biểu và biểu đồ. Loại phân tích này giúp doanh nghiệp trả lời câu hỏi ``điều gì đã xảy ra'' \cite{islr}.
+    
+    \item \textbf{Phân tích chẩn đoán:} Loại hình phân tích này tập trung làm rõ nguyên nhân của các hiện tượng kinh doanh, chẳng hạn như vì sao doanh số tăng hoặc giảm, vì sao một nhóm sản phẩm hoạt động kém hiệu quả, hoặc vì sao lợi nhuận giữa các khu vực có sự khác biệt. Phân tích chẩn đoán giúp trả lời câu hỏi ``vì sao điều đó xảy ra'' \cite{esl}.
+    
+    \item \textbf{Phân tích dự báo:} Đây là loại hình sử dụng dữ liệu lịch sử để dự đoán xu hướng hoặc kết quả trong tương lai. Trong kinh doanh, phân tích dự báo thường được áp dụng để ước lượng doanh số, nhu cầu tiêu dùng hoặc khả năng sinh lợi của doanh nghiệp trong các giai đoạn tiếp theo \cite{islr,esl}.
+    
+    \item \textbf{Phân tích đề xuất:} Đây là mức độ phân tích cao hơn, trong đó dữ liệu được sử dụng để hỗ trợ lựa chọn phương án hành động phù hợp. Loại hình này giúp doanh nghiệp đưa ra quyết định có cơ sở hơn trong hoạt động quản lý và điều hành \cite{esl}.
+\end{itemize}
+
+Việc kết hợp các loại hình phân tích này giúp doanh nghiệp có cái nhìn toàn diện hơn về hoạt động kinh doanh và nâng cao hiệu quả ra quyết định \cite{islr,esl}.
+
+\section{Dữ liệu và tiền xử lý dữ liệu}
+
+Dữ liệu là cơ sở đầu vào của quá trình phân tích, phản ánh các thông tin liên quan đến hoạt động kinh doanh như thời gian, khách hàng, sản phẩm, khu vực, doanh thu và lợi nhuận \cite{islr,geron}. Chất lượng dữ liệu ảnh hưởng trực tiếp đến độ tin cậy của kết quả phân tích và hiệu quả của các mô hình được xây dựng \cite{geron}.
+
+Tiền xử lý dữ liệu là bước chuẩn bị dữ liệu trước khi tiến hành phân tích và xây dựng mô hình \cite{islr,geron}. Các công việc thường được thực hiện gồm kiểm tra dữ liệu thiếu, dữ liệu trùng lặp, chuẩn hóa kiểu dữ liệu, xử lý giá trị ngoại lai và lựa chọn biến phù hợp cho mục tiêu nghiên cứu \cite{geron}.
+
+Đối với các mô hình phân tích dữ liệu, tiền xử lý còn bao gồm việc mã hóa các biến định tính, chuẩn bị các biến đầu vào và tách dữ liệu thành tập huấn luyện và tập kiểm tra. Đây là bước cần thiết nhằm bảo đảm dữ liệu có tính đầy đủ, nhất quán và phù hợp cho các giai đoạn phân tích tiếp theo \cite{geron}.
+
+Tiền xử lý dữ liệu giữ vai trò quan trọng vì là cơ sở để thực hiện phân tích chuyên sâu, xây dựng dashboard trực quan và triển khai các mô hình nghiên cứu trên bộ dữ liệu \cite{islr,geron}.
+
+\section{Trực quan hóa dữ liệu và Business Intelligence}
+
+Trực quan hóa dữ liệu là quá trình biểu diễn dữ liệu dưới dạng hình ảnh như biểu đồ, đồ thị, bản đồ hoặc bảng tổng hợp nhằm giúp người dùng dễ quan sát, so sánh và nhận diện thông tin quan trọng \cite{few}. Thay vì chỉ trình bày dữ liệu dưới dạng bảng số liệu, trực quan hóa giúp làm rõ xu hướng, sự khác biệt, mối quan hệ giữa các biến và những điểm nổi bật trong dữ liệu \cite{few}.
+
+Trong phân tích dữ liệu kinh doanh, trực quan hóa dữ liệu giữ vai trò quan trọng vì giúp chuyển các số liệu phức tạp thành thông tin trực quan, rõ ràng và dễ hiểu hơn \cite{few}. Thông qua biểu đồ và dashboard, doanh nghiệp có thể nhanh chóng theo dõi doanh số, doanh thu, lợi nhuận, hiệu quả theo khu vực, sản phẩm hoặc nhóm khách hàng, từ đó hỗ trợ quá trình đánh giá và ra quyết định \cite{powerbi}.
+
+Business Intelligence (BI) là tập hợp các phương pháp, quy trình và công cụ hỗ trợ doanh nghiệp thu thập, xử lý, phân tích và trình bày dữ liệu nhằm phục vụ cho hoạt động quản trị \cite{powerbi}. BI không chỉ dừng ở việc hiển thị dữ liệu mà còn giúp tổng hợp thông tin, theo dõi các chỉ số quan trọng và hỗ trợ nhà quản lý nhìn nhận tình hình kinh doanh một cách hệ thống hơn \cite{powerbi}.
+
+Trong đề tài này, trực quan hóa dữ liệu và Business Intelligence là cơ sở quan trọng để trình bày kết quả phân tích một cách rõ ràng và trực quan. Việc xây dựng dashboard trên Power BI giúp thể hiện các chỉ số và biểu đồ liên quan đến doanh số bán hàng, lợi nhuận, khu vực, sản phẩm và xu hướng tiêu dùng của khách hàng, qua đó hỗ trợ quá trình phân tích, đánh giá và rút ra nhận xét.
+
+\section{Cơ sở lý thuyết của các mô hình nghiên cứu}
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Hồi quy tuyến tính đa biến}
+
+Hồi quy tuyến tính đa biến là mô hình được sử dụng để mô tả mối quan hệ giữa một biến phụ thuộc và nhiều biến độc lập \cite{sklearn_linear,islr}. Mô hình này giả định rằng biến phụ thuộc có thể được biểu diễn dưới dạng tổ hợp tuyến tính của các biến đầu vào \cite{sklearn_linear}. Trong bài toán kinh doanh, hồi quy tuyến tính đa biến thường được sử dụng để phân tích mức độ ảnh hưởng của các yếu tố như số lượng bán, chiết khấu, khu vực hay nhóm khách hàng đến doanh thu hoặc lợi nhuận \cite{islr}.
+
+Dạng tổng quát của mô hình hồi quy tuyến tính đa biến được biểu diễn như sau \cite{sklearn_linear}:
+
+\begin{equation}
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_n X_n + \varepsilon
+\label{eq:mlr}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(Y\) là biến phụ thuộc.
+    \item \(X_1, X_2, \dots, X_n\) là các biến độc lập.
+    \item \(\beta_0\) là hệ số chặn của mô hình.
+    \item \(\beta_1, \beta_2, \dots, \beta_n\) là các hệ số hồi quy, phản ánh mức độ tác động của từng biến độc lập đến biến phụ thuộc.
+    \item \(\varepsilon\) là sai số ngẫu nhiên.
+\end{itemize}
+
+Từ công thức \eqref{eq:mlr}, có thể thấy giá trị của biến phụ thuộc được xác định dựa trên ảnh hưởng tổng hợp của nhiều biến đầu vào. Ưu điểm của mô hình là dễ xây dựng, dễ diễn giải và cho phép đánh giá chiều hướng tác động của từng biến. Tuy nhiên, mô hình phù hợp hơn khi mối quan hệ giữa các biến có tính tuyến tính và có thể bị ảnh hưởng bởi dữ liệu ngoại lai hoặc hiện tượng đa cộng tuyến \cite{islr,esl}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Random Forest Regressor}
+
+Random Forest Regressor là mô hình học máy thuộc nhóm phương pháp tổ hợp, hoạt động dựa trên việc xây dựng nhiều cây quyết định và tổng hợp kết quả từ các cây đó để đưa ra dự đoán cuối cùng \cite{sklearn_rf,esl}. Khác với hồi quy tuyến tính đa biến, mô hình này có khả năng xử lý tốt các quan hệ phi tuyến và sự tương tác phức tạp giữa các biến \cite{sklearn_rf}.
+
+Về nguyên tắc, giá trị dự đoán của Random Forest Regressor được xác định bằng trung bình kết quả dự đoán từ nhiều cây quyết định \cite{sklearn_rf}:
+
+\begin{equation}
+\hat{Y} = \frac{1}{B} \sum_{b=1}^{B} T_b(X)
+\label{eq:rf}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(\hat{Y}\) là giá trị dự đoán của mô hình.
+    \item \(B\) là số lượng cây quyết định trong rừng.
+    \item \(T_b(X)\) là giá trị dự đoán của cây thứ \(b\) đối với quan sát \(X\).
+    \item \(X\) là vector đặc trưng đầu vào.
+\end{itemize}
+
+Công thức \eqref{eq:rf} cho thấy Random Forest Regressor không dựa vào một mô hình đơn lẻ mà kết hợp nhiều cây quyết định để giảm sai số và tăng độ ổn định. Trong nghiên cứu kinh doanh, mô hình này thường được sử dụng để dự đoán doanh thu hoặc lợi nhuận từ nhiều yếu tố đầu vào khác nhau. Ưu điểm của mô hình là độ chính xác dự báo khá cao, ít nhạy cảm hơn với nhiễu và có thể xác định mức độ quan trọng của các biến. Tuy nhiên, khả năng diễn giải của mô hình thường không trực quan bằng hồi quy tuyến tính đa biến \cite{sklearn_rf,esl}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Gradient Boosting Regressor}
+
+Gradient Boosting Regressor là mô hình thuộc nhóm boosting, được xây dựng theo cơ chế kết hợp nhiều mô hình yếu, thường là các cây quyết định nhỏ, theo cách tuần tự nhằm giảm dần sai số dự báo \cite{sklearn_gbr,esl}. Ý tưởng của mô hình là mỗi mô hình mới sẽ học trên phần sai số mà mô hình trước đó chưa giải thích tốt \cite{sklearn_gbr}.
+
+Dạng tổng quát của mô hình có thể biểu diễn như sau \cite{sklearn_gbr,esl}:
+
+\begin{equation}
+F_M(X) = \sum_{m=1}^{M} \gamma_m h_m(X)
+\label{eq:gbr1}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(F_M(X)\) là giá trị dự đoán cuối cùng sau \(M\) bước lặp.
+    \item \(h_m(X)\) là mô hình yếu thứ \(m\), thường là một cây quyết định nhỏ.
+    \item \(\gamma_m\) là hệ số trọng số của mô hình yếu thứ \(m\).
+    \item \(M\) là số lượng mô hình yếu được kết hợp.
+\end{itemize}
+
+Ở mỗi bước, mô hình sẽ cập nhật theo hướng làm giảm hàm mất mát. Nếu ký hiệu \(F_{m-1}(X)\) là mô hình tại bước trước, thì mô hình tại bước tiếp theo có thể được viết:
+
+\begin{equation}
+F_m(X) = F_{m-1}(X) + \gamma_m h_m(X)
+\label{eq:gbr2}
+\end{equation}
+
+Điều này cho thấy Gradient Boosting Regressor cải thiện kết quả dự báo theo hướng tuần tự, từng bước giảm sai số. Mô hình có khả năng học tốt các quan hệ phức tạp trong dữ liệu và thường cho kết quả khá tốt đối với dữ liệu dạng bảng. Tuy nhiên, thời gian huấn luyện có thể lớn hơn và mô hình cần được điều chỉnh tham số phù hợp để tránh hiện tượng quá khớp \cite{sklearn_gbr,esl}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad XGBoost Regressor}
+
+XGBoost Regressor là phiên bản nâng cao của phương pháp boosting, được phát triển nhằm tối ưu tốc độ tính toán và hiệu quả dự báo \cite{chen2016xgboost}. Mô hình này cũng xây dựng các cây quyết định theo cách tuần tự, nhưng bổ sung thêm các kỹ thuật điều chuẩn để kiểm soát độ phức tạp của mô hình và hạn chế hiện tượng quá khớp \cite{chen2016xgboost}.
+
+Hàm mục tiêu của XGBoost có thể được biểu diễn dưới dạng sau \cite{chen2016xgboost}:
+
+\begin{equation}
+\mathcal{L}(\phi) = \sum_{i=1}^{n} l(\hat{y}_i, y_i) + \sum_{k=1}^{K} \Omega(f_k)
+\label{eq:xgb1}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(\mathcal{L}(\phi)\) là hàm mục tiêu cần tối thiểu hóa.
+    \item \(l(\hat{y}_i, y_i)\) là hàm mất mát giữa giá trị dự đoán \(\hat{y}_i\) và giá trị thực tế \(y_i\).
+    \item \(\Omega(f_k)\) là thành phần điều chuẩn của cây thứ \(k\).
+    \item \(K\) là số cây được xây dựng trong mô hình.
+\end{itemize}
+
+Thành phần điều chuẩn thường được viết như sau \cite{chen2016xgboost}:
+
+\begin{equation}
+\Omega(f) = \gamma T + \frac{1}{2}\lambda \|w\|^2
+\label{eq:xgb2}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(T\) là số lá của cây.
+    \item \(w\) là vector trọng số của các lá.
+    \item \(\gamma\) và \(\lambda\) là các tham số điều chuẩn.
+\end{itemize}
+
+Các công thức \eqref{eq:xgb1} và \eqref{eq:xgb2} cho thấy XGBoost không chỉ tối ưu sai số dự đoán mà còn kiểm soát độ phức tạp của mô hình. Nhờ đó, XGBoost thường cho độ chính xác cao đối với dữ liệu có cấu trúc dạng bảng. Tuy nhiên, việc triển khai mô hình thường phức tạp hơn và cần điều chỉnh tham số cẩn thận \cite{chen2016xgboost}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad K-Means Clustering}
+
+K-Means Clustering là thuật toán học không giám sát được sử dụng để phân chia dữ liệu thành các nhóm dựa trên mức độ tương đồng giữa các quan sát \cite{sklearn_kmeans}. Mục tiêu của thuật toán là làm cho các đối tượng trong cùng một cụm có mức độ gần nhau cao hơn so với các đối tượng ở cụm khác \cite{sklearn_kmeans}.
+
+Về mặt toán học, K-Means tìm cách tối thiểu hóa tổng bình phương khoảng cách từ mỗi điểm dữ liệu đến tâm cụm gần nhất \cite{sklearn_kmeans}:
+
+\begin{equation}
+J = \sum_{j=1}^{K} \sum_{x_i \in C_j} \|x_i - \mu_j\|^2
+\label{eq:kmeans1}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(J\) là hàm mục tiêu của thuật toán.
+    \item \(K\) là số cụm cần phân chia.
+    \item \(C_j\) là cụm thứ \(j\).
+    \item \(x_i\) là điểm dữ liệu thứ \(i\) thuộc cụm \(C_j\).
+    \item \(\mu_j\) là tâm của cụm thứ \(j\).
+\end{itemize}
+
+Tâm cụm được xác định bằng trung bình của các điểm dữ liệu trong cụm \cite{sklearn_kmeans}:
+
+\begin{equation}
+\mu_j = \frac{1}{|C_j|} \sum_{x_i \in C_j} x_i
+\label{eq:kmeans2}
+\end{equation}
+
+Trong đó \(|C_j|\) là số phần tử thuộc cụm \(C_j\).
+
+Từ các công thức \eqref{eq:kmeans1} và \eqref{eq:kmeans2}, có thể thấy K-Means Clustering hướng đến việc tạo ra các cụm có tính đồng nhất cao. Trong nghiên cứu kinh doanh, thuật toán này thường được sử dụng để phân nhóm khách hàng theo đặc điểm tiêu dùng, giá trị mua hàng hoặc mức độ đóng góp vào doanh thu. Kết quả phân cụm giúp doanh nghiệp nhận diện các nhóm khách hàng khác nhau và hỗ trợ xây dựng chiến lược phù hợp cho từng nhóm. Tuy nhiên, hiệu quả của thuật toán phụ thuộc vào việc lựa chọn số cụm phù hợp và đặc điểm của dữ liệu đầu vào \cite{sklearn_kmeans}.
+
+\section{Các chỉ số đánh giá mô hình}
+
+Để đánh giá chất lượng của các mô hình dự báo trong đề tài, một số chỉ số thường được sử dụng gồm \textbf{MAE}, \textbf{MSE}, \textbf{RMSE} và \textbf{$R^2$} \cite{sklearn_userguide}. Các chỉ số này giúp đo lường mức độ sai lệch giữa giá trị dự đoán và giá trị thực tế, đồng thời phản ánh khả năng giải thích của mô hình đối với biến mục tiêu. Đối với mô hình phân cụm K-Means, đề tài sử dụng thêm \textbf{Elbow Method} và \textbf{Silhouette Score} để hỗ trợ lựa chọn số cụm phù hợp và đánh giá chất lượng phân cụm \cite{sklearn_kmeans,sklearn_silhouette}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Sai số tuyệt đối trung bình (MAE)}
+
+Sai số tuyệt đối trung bình, ký hiệu là MAE (\textit{Mean Absolute Error}), được xác định như sau \cite{sklearn_userguide}:
+
+\begin{equation}
+MAE = \frac{1}{n} \sum_{i=1}^{n} \left| y_i - \hat{y}_i \right|
+\label{eq:mae}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(n\) là số lượng quan sát.
+    \item \(y_i\) là giá trị thực tế của quan sát thứ \(i\).
+    \item \(\hat{y}_i\) là giá trị dự đoán của quan sát thứ \(i\).
+\end{itemize}
+
+Chỉ số MAE cho biết mức sai lệch trung bình giữa dự đoán và thực tế. Giá trị MAE càng nhỏ thì mô hình càng tốt \cite{sklearn_userguide}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Sai số bình phương trung bình (MSE)}
+
+Sai số bình phương trung bình, ký hiệu là MSE (\textit{Mean Squared Error}), được xác định như sau \cite{sklearn_userguide}:
+
+\begin{equation}
+MSE = \frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2
+\label{eq:mse}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(n\) là số lượng quan sát.
+    \item \(y_i\) là giá trị thực tế của quan sát thứ \(i\).
+    \item \(\hat{y}_i\) là giá trị dự đoán của quan sát thứ \(i\).
+\end{itemize}
+
+MSE nhấn mạnh hơn vào các sai số lớn do sai số được bình phương. Giá trị MSE càng nhỏ thì mô hình càng phù hợp \cite{sklearn_userguide}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Căn bậc hai của sai số bình phương trung bình (RMSE)}
+
+RMSE (\textit{Root Mean Squared Error}) là căn bậc hai của MSE, được tính như sau \cite{sklearn_userguide}:
+
+\begin{equation}
+RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2}
+\label{eq:rmse}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(n\) là số lượng quan sát.
+    \item \(y_i\) là giá trị thực tế của quan sát thứ \(i\).
+    \item \(\hat{y}_i\) là giá trị dự đoán của quan sát thứ \(i\).
+\end{itemize}
+
+RMSE có cùng đơn vị với biến mục tiêu nên dễ diễn giải hơn trong thực tế. Giá trị RMSE càng nhỏ thì độ chính xác dự báo càng cao \cite{sklearn_userguide}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Hệ số xác định (\(R^2\))}
+
+Hệ số xác định \(R^2\) được sử dụng để đo mức độ giải thích của mô hình đối với sự biến thiên của biến phụ thuộc \cite{sklearn_userguide}. Công thức được xác định như sau:
+
+\begin{equation}
+R^2 = 1 - \frac{\sum_{i=1}^{n} \left( y_i - \hat{y}_i \right)^2}{\sum_{i=1}^{n} \left( y_i - \bar{y} \right)^2}
+\label{eq:r2}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(y_i\) là giá trị thực tế của quan sát thứ \(i\).
+    \item \(\hat{y}_i\) là giá trị dự đoán của quan sát thứ \(i\).
+    \item \(\bar{y}\) là giá trị trung bình của biến thực tế.
+    \item \(n\) là số lượng quan sát.
+\end{itemize}
+
+Giá trị \(R^2\) càng gần 1 thì mô hình càng có khả năng giải thích tốt biến phụ thuộc \cite{sklearn_userguide}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Phương pháp khuỷu tay (Elbow Method)}
+
+Đối với mô hình K-Means Clustering, một trong những vấn đề quan trọng là lựa chọn số cụm \(K\) phù hợp. Elbow Method là phương pháp thường được sử dụng để hỗ trợ lựa chọn số cụm bằng cách quan sát mức giảm của tổng sai số trong cụm khi số cụm tăng lên \cite{sklearn_kmeans}.
+
+Chỉ số thường được sử dụng trong phương pháp này là tổng bình phương khoảng cách trong cụm (\textit{Within-Cluster Sum of Squares} - WCSS) \cite{sklearn_kmeans}:
+
+\begin{equation}
+WCSS = \sum_{j=1}^{K} \sum_{x_i \in C_j} \|x_i - \mu_j\|^2
+\label{eq:wcss}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(K\) là số cụm.
+    \item \(C_j\) là cụm thứ \(j\).
+    \item \(x_i\) là điểm dữ liệu thuộc cụm \(C_j\).
+    \item \(\mu_j\) là tâm cụm thứ \(j\).
+\end{itemize}
+
+Khi biểu diễn WCSS theo số cụm \(K\), điểm mà tốc độ giảm bắt đầu chậm lại tạo thành hình dạng giống ``khuỷu tay'' thường được xem là số cụm phù hợp \cite{sklearn_kmeans}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Chỉ số Silhouette (Silhouette Score)}
+
+Silhouette Score là chỉ số được sử dụng để đánh giá chất lượng phân cụm bằng cách đo mức độ tương đồng của một điểm dữ liệu với các điểm trong cùng cụm so với các cụm khác \cite{sklearn_silhouette}. Hệ số silhouette của một điểm dữ liệu được xác định như sau:
+
+\begin{equation}
+s(i) = \frac{b(i) - a(i)}{\max \{a(i), b(i)\}}
+\label{eq:silhouette}
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item \(a(i)\) là khoảng cách trung bình từ điểm \(i\) đến các điểm khác trong cùng cụm.
+    \item \(b(i)\) là khoảng cách trung bình nhỏ nhất từ điểm \(i\) đến các điểm trong cụm gần nhất khác.
+\end{itemize}
+
+Giá trị của \(s(i)\) nằm trong khoảng từ \(-1\) đến \(1\). Giá trị càng gần \(1\) cho thấy điểm dữ liệu được phân cụm càng tốt; giá trị gần \(0\) cho thấy điểm dữ liệu nằm ở ranh giới giữa các cụm; giá trị âm cho thấy điểm dữ liệu có thể đã được gán sai cụm \cite{sklearn_silhouette}.
+
+\refstepcounter{subsection}
+\subsection*{\thesubsection\quad Ý nghĩa của việc sử dụng các chỉ số đánh giá}
+
+Việc kết hợp các chỉ số MAE, MSE, RMSE và \(R^2\) giúp đánh giá các mô hình dự báo một cách toàn diện hơn. Trong đó, MAE phản ánh sai số trung bình theo giá trị tuyệt đối, MSE và RMSE phản ánh mức độ sai lệch với sự nhấn mạnh vào các sai số lớn, còn \(R^2\) cho biết khả năng giải thích của mô hình đối với dữ liệu \cite{sklearn_userguide}.
+
+Đối với mô hình K-Means Clustering, Elbow Method hỗ trợ lựa chọn số cụm phù hợp, còn Silhouette Score giúp đánh giá mức độ tách biệt và tính hợp lý của các cụm. Nhờ đó, đề tài có thể đánh giá và so sánh hiệu quả giữa các mô hình nghiên cứu một cách khách quan hơn \cite{sklearn_kmeans,sklearn_silhouette}.
+

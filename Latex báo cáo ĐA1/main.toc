@@ -1,0 +1,38 @@
+\contentsline {chapter}{\numberline {1}Tổng quan về đề tài}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Bối cảnh và tính cấp thiết của đề tài}{10}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Mục tiêu nghiên cứu}{11}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Đối tượng và phạm vi nghiên cứu}{12}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Phương pháp nghiên cứu}{13}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Ý nghĩa khoa học và thực tiễn của đề tài}{14}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Cơ sở lý thuyết}{16}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Khái quát về phân tích dữ liệu trong kinh doanh}{16}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Các loại hình phân tích dữ liệu trong kinh doanh}{17}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Dữ liệu và tiền xử lý dữ liệu}{17}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Trực quan hóa dữ liệu và Business Intelligence}{18}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Cơ sở lý thuyết của các mô hình nghiên cứu}{19}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Các chỉ số đánh giá mô hình}{24}{section.2.6}%
+\contentsline {chapter}{\numberline {3}Phân tích, khám phá dữ liệu và trực quan hóa}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tổng quan bộ dữ liệu và phân tích khám phá dữ liệu}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Thiết kế và xây dựng dashboard trong Power BI}{40}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Diễn giải ý nghĩa biểu đồ và bộ lọc trên dashboard}{42}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Đánh giá khả năng hỗ trợ phân tích của dashboard}{44}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Xây dựng các mô hình phân tích dữ liệu}{46}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Mục tiêu xây dựng các mô hình}{46}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Lựa chọn các biến phân tích}{48}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Mô hình hồi quy tuyến tính đa biến}{50}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Mô hình Random Forest}{55}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Mô hình Gradient Boosting}{59}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Mô hình XGBoost}{64}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Mô hình K-Means Clustering}{69}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Đánh giá và so sánh mô hình}{79}{chapter.5}%
+\contentsline {section}{\numberline {5.1}So sánh hiệu quả giữa các mô hình}{79}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Lựa chọn mô hình phù hợp}{80}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ý nghĩa thực tiễn của kết quả mô hình}{81}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Kết luận và hướng phát triển}{82}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Kết luận chung}{82}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Những kết quả đạt được}{83}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Hạn chế tồn đọng của đề tài}{84}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Hướng phát triển trong tương lai}{84}{section.6.4}%
+\contentsline {chapter}{Phụ lục}{86}{chapter*.113}%
+\contentsline {chapter}{\bfseries Tài liệu tham khảo}{87}{section*.114}%
+\contentsfinish 

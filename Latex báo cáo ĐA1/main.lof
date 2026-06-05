@@ -1,0 +1,53 @@
+\addvspace {10\p@ }
+\contentsline {xchapter}{Tổng quan về đề tài}{10}{chapter.1}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Cơ sở lý thuyết}{16}{chapter.2}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Phân tích, khám phá dữ liệu và trực quan hóa}{29}{chapter.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Tổng quan chất lượng dữ liệu sau làm sạch}}{31}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Doanh thu và lợi nhuận theo năm}}{33}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Xu hướng doanh thu theo tháng}}{34}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Doanh thu theo khu vực}}{35}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Lợi nhuận theo danh mục sản phẩm}}{36}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Top 10 tiểu danh mục có lợi nhuận cao nhất}}{37}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Doanh thu theo phân khúc khách hàng}}{38}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Lợi nhuận theo nhóm chiết khấu}}{39}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Trang tổng quan kinh doanh trên Power BI}}{41}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Trang phân tích khu vực và sản phẩm trên Power BI}}{41}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Trang phân tích khách hàng và chiết khấu trên Power BI}}{42}{figure.caption.46}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Xây dựng các mô hình phân tích dữ liệu}{46}{chapter.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Quy trình xây dựng và đánh giá mô hình phân tích dữ liệu}}{48}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Kết quả mô hình hồi quy tuyến tính trước xử lý ngoại lai}}{51}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces QQ Plot phần dư trước xử lý ngoại lai}}{52}{figure.caption.60}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Kết quả mô hình hồi quy tuyến tính sau xử lý ngoại lai}}{53}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces QQ Plot phần dư sau xử lý ngoại lai}}{53}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces \centering Kết quả mô hình Random Forest trước xử lý ngoại lai}}{56}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces \centering Mức độ quan trọng của các biến trước khi xử lý ngoại lai}}{56}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces \centering Kết quả mô hình Random Forest sau xử lý ngoại lai}}{57}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces \centering Mức độ quan trọng của các biến sau xử lý ngoại lai}}{58}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces \centering Kết quả mô hình Gradient Boosting trước xử lý ngoại lai}}{60}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces \centering Ma trận tương quan giữa các biến số chính trước xử lý ngoại lai}}{61}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces \centering Kết quả mô hình Gradient Boosting sau xử lý ngoại lai}}{62}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces \centering Ma trận tương quan giữa các biến số chính sau xử lý ngoại lai}}{63}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces \centering Kết quả mô hình XGBoost trước xử lý ngoại lai}}{65}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces \centering Mức độ ảnh hưởng của các biến trước xử lý ngoại lai}}{66}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces \centering Kết quả mô hình XGBoost sau xử lý ngoại lai}}{67}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces \centering Mức độ ảnh hưởng của các biến sau xử lý ngoại lai}}{68}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces \centering Kết quả đánh giá số cụm K-Means trước xử lý ngoại lai}}{71}{figure.caption.95}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces \centering Elbow Method của mô hình K-Means trước xử lý ngoại lai}}{71}{figure.caption.96}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces \centering Silhouette Score của mô hình K-Means trước xử lý ngoại lai}}{71}{figure.caption.97}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces \centering Phân cụm khách hàng trước xử lý ngoại lai}}{72}{figure.caption.98}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces \centering Số lượng khách hàng trong từng cụm trước xử lý ngoại lai}}{73}{figure.caption.99}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces \centering Doanh thu, lợi nhuận trung bình theo cụm trước xử lý ngoại lai}}{73}{figure.caption.100}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces \centering Kết quả đánh giá số cụm K-Means sau xử lý ngoại lai}}{74}{figure.caption.102}%
+\contentsline {figure}{\numberline {4.25}{\ignorespaces \centering Elbow Method của mô hình K-Means sau xử lý ngoại lai}}{75}{figure.caption.103}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces \centering Silhouette Score của mô hình K-Means sau xử lý ngoại lai}}{75}{figure.caption.104}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces \centering Phân cụm khách hàng sau xử lý ngoại lai}}{76}{figure.caption.105}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces \centering Số lượng khách hàng trong từng cụm sau xử lý ngoại lai}}{76}{figure.caption.106}%
+\contentsline {figure}{\numberline {4.29}{\ignorespaces \centering Doanh thu, lợi nhuận trung bình theo cụm sau xử lý ngoại lai}}{77}{figure.caption.107}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Đánh giá và so sánh mô hình}{79}{chapter.5}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Kết luận và hướng phát triển}{82}{chapter.6}%
+\contentsfinish 

@@ -1,0 +1,65 @@
+\section{So sánh hiệu quả giữa các mô hình}
+
+ Việc so sánh được thực hiện trên tập kiểm tra vì đây là phần dữ liệu chưa được sử dụng trong quá trình huấn luyện, do đó phản ánh tốt hơn khả năng tổng quát hóa của mô hình.
+
+K-Means là mô hình học không giám sát phục vụ phân cụm khách hàng, mô hình này không được so sánh trực tiếp với các mô hình dự báo thông qua MAE, RMSE hay \(R^2\). Thay vào đó, K-Means được đánh giá thông qua Elbow Method, Silhouette Score và khả năng diễn giải các cụm khách hàng.
+
+\begin{table}[H]
+	\centering
+	\caption{Tổng hợp kết quả các mô hình dự báo sau xử lý ngoại lai trên tập kiểm tra}
+	\label{tab:model_result_after_outlier}
+	\begin{tabular}{|l|r|r|r|r|}
+		\hline
+		\textbf{Mô hình} & \textbf{MAE} & \textbf{MSE} & \textbf{RMSE} & \textbf{\(R^2\)} \\ \hline
+		Hồi quy tuyến tính đa biến & 18.4952 & 548.4677 & 23.4194 & 0.3617 \\ \hline
+		Random Forest Regressor & 15.4900 & 438.9221 & 20.9505 & 0.4892 \\ \hline
+		Gradient Boosting Regressor & 15.7957 & 426.5068 & 20.6520 & 0.5036 \\ \hline
+		XGBoost Regressor & 15.5767 & 420.2505 & 20.5000 & 0.5109 \\ \hline
+	\end{tabular}
+\end{table}
+
+Từ Bảng \ref{tab:model_result_after_outlier}, có thể thấy XGBoost Regressor đạt kết quả tốt nhất với \(R^2 = 0.5109\) và RMSE = 20.5000. Gradient Boosting cũng cho kết quả khá tốt với \(R^2 = 0.5036\). Random Forest có MAE thấp nhưng \(R^2\) thấp hơn XGBoost và Gradient Boosting. Trong khi đó, hồi quy tuyến tính đa biến có hiệu quả thấp nhất do khó mô hình hóa các quan hệ phi tuyến trong dữ liệu bán lẻ.
+
+Nhìn chung, các mô hình học máy phi tuyến, đặc biệt là nhóm ensemble và boosting, phù hợp hơn với bài toán dự báo lợi nhuận so với mô hình tuyến tính. Điều này xuất phát từ đặc điểm dữ liệu bán lẻ, trong đó lợi nhuận chịu ảnh hưởng đồng thời bởi nhiều yếu tố như doanh thu, chiết khấu, số lượng bán, danh mục sản phẩm và khu vực.
+
+\section{Lựa chọn mô hình phù hợp}
+
+Dựa trên kết quả so sánh, XGBoost được lựa chọn là mô hình phù hợp nhất cho bài toán dự báo lợi nhuận trong phạm vi đề tài. Mô hình này đạt hệ số \(R^2\) cao nhất và RMSE thấp nhất trên tập kiểm tra, cho thấy khả năng dự báo tốt hơn các mô hình còn lại.
+
+XGBoost phù hợp với dữ liệu bán lẻ vì có khả năng học các quan hệ phi tuyến và tương tác phức tạp giữa nhiều biến đầu vào. Bên cạnh đó, mô hình có cơ chế điều chuẩn giúp kiểm soát độ phức tạp và hạn chế hiện tượng quá khớp tốt hơn so với một số mô hình boosting thông thường.
+
+Tuy nhiên, XGBoost có nhược điểm là khó diễn giải hơn hồi quy tuyến tính và cần quá trình xử lý dữ liệu, mã hóa biến định tính cũng như điều chỉnh tham số phù hợp. Vì vậy, trong đề tài này, hồi quy tuyến tính vẫn có ý nghĩa như mô hình nền để tham chiếu, còn XGBoost được xem là mô hình dự báo chính.
+
+Đối với K-Means, mô hình không dùng để dự báo lợi nhuận mà phục vụ phân cụm khách hàng theo doanh thu và lợi nhuận. Kết quả phân cụm giúp bổ sung góc nhìn về hành vi và giá trị khách hàng, hỗ trợ doanh nghiệp nhận diện nhóm khách hàng tiềm năng và nhóm khách hàng cần tối ưu chính sách bán hàng.
+
+\section{Ý nghĩa thực tiễn của kết quả mô hình}
+
+Kết quả xây dựng mô hình không chỉ giúp so sánh hiệu quả dự báo mà còn hỗ trợ rút ra một số nhận xét có ý nghĩa thực tiễn đối với hoạt động kinh doanh bán lẻ. Các mô hình cho thấy lợi nhuận chịu ảnh hưởng bởi nhiều yếu tố như Discount, Sales, Quantity, Category, Sub-Category và đặc điểm khách hàng.
+
+\begin{table}[H]
+	\centering
+	\caption{Ý nghĩa thực tiễn rút ra từ kết quả mô hình}
+	\label{tab:practical_meaning_model}
+	\renewcommand{\arraystretch}{1.3}
+	\begin{tabular}{|p{3.2cm}|p{5.3cm}|p{5.3cm}|}
+		\hline
+		\textbf{Yếu tố} & \textbf{Kết quả rút ra} & \textbf{Ý nghĩa thực tiễn} \\ \hline
+		
+		Discount & Có ảnh hưởng lớn đến lợi nhuận, đặc biệt khi mức chiết khấu cao dễ đi kèm lợi nhuận thấp hoặc giao dịch lỗ. 
+		& Doanh nghiệp cần kiểm soát chính sách chiết khấu hợp lý, tránh tăng doanh thu nhưng làm giảm lợi nhuận. \\ \hline
+		
+		Sales và Quantity & Có vai trò quan trọng trong dự báo lợi nhuận, nhưng doanh thu cao chưa chắc luôn đồng nghĩa với lợi nhuận cao. 
+		& Cần đánh giá hiệu quả kinh doanh dựa trên cả doanh thu và lợi nhuận, không chỉ tập trung vào doanh số bán hàng. \\ \hline
+		
+		Category và Sub-Category & Một số nhóm sản phẩm có khả năng đóng góp lợi nhuận tốt hơn các nhóm khác. 
+		& Doanh nghiệp có thể điều chỉnh chiến lược sản phẩm, giá bán và khuyến mãi theo từng nhóm hàng. \\ \hline
+		
+		K-Means Clustering & Giúp phân nhóm khách hàng dựa trên doanh thu và lợi nhuận. 
+		& Hỗ trợ nhận diện nhóm khách hàng giá trị cao, nhóm khách hàng lợi nhuận thấp và xây dựng chính sách chăm sóc phù hợp. \\ \hline
+		
+		Dashboard và mô hình học máy & Dashboard giúp quan sát xu hướng, còn mô hình giúp lượng hóa mối quan hệ giữa các yếu tố và lợi nhuận. 
+		& Kết hợp trực quan hóa và mô hình giúp nâng cao cơ sở ra quyết định dựa trên dữ liệu. \\ \hline
+	\end{tabular}
+\end{table}
+
+Dashboard hỗ trợ quan sát xu hướng, trong khi mô hình học máy giúp đánh giá sâu hơn mối quan hệ giữa các yếu tố và lợi nhuận. Sự kết hợp này giúp kết quả phân tích có cơ sở hơn và hỗ trợ tốt hơn cho quá trình ra quyết định trong hoạt động kinh doanh bán lẻ.
